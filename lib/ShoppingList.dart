@@ -11,12 +11,12 @@ class ShoppingList extends StatefulWidget {
 
 
   @override
-  _SoppingListState createState() {
-    return new _SoppingListState();
+  _ShoppingListState createState() {
+    return new _ShoppingListState();
   }
 }
 
-class _ShoppingListState extends State<SoppingList> {
+class _ShoppingListState extends State<ShoppingList> {
 
   @override
   Widget build(BuildContext context) {
