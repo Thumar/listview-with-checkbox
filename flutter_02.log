@@ -1,0 +1,91 @@
+Flutter crash report; please file at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter build flx --suppress-analytics --target /home/brijesh/IdeaProjects/untitled1/lib/main.dart --output-file /home/brijesh/IdeaProjects/untitled1/build/app/intermediates/flutter/debug/app.flx --snapshot /home/brijesh/IdeaProjects/untitled1/build/app/intermediates/flutter/debug/snapshot_blob.bin --depfile /home/brijesh/IdeaProjects/untitled1/build/app/intermediates/flutter/debug/snapshot_blob.bin.d --working-dir /home/brijesh/IdeaProjects/untitled1/build/app/intermediates/flutter/debug/flx
+
+## exception
+
+FileSystemException: FileSystemException: Directory listing failed, path = '/home/brijesh/IdeaProjects/untitled1/images/' (OS Error: No such file or directory, errno = 2)
+
+```
+#0      _Directory._fillWithDirectoryListing (dart:io-patch/directory_patch.dart:28)
+#1      _Directory.listSync (dart:io/directory_impl.dart:202)
+#2      _LocalFileSystemEntity&ForwardingDirectory.listSync (package:file/src/forwarding/forwarding_directory.dart:43)
+#3      _AssetDirectoryCache.variantsFor (package:flutter_tools/src/asset.dart:344)
+#4      _parseAssets (package:flutter_tools/src/asset.dart:386)
+#5      AssetBundle.build (package:flutter_tools/src/asset.dart:101)
+<asynchronous suspension>
+#6      assemble (package:flutter_tools/src/flx.dart:171)
+<asynchronous suspension>
+#7      build (package:flutter_tools/src/flx.dart:140)
+<asynchronous suspension>
+#8      BuildFlxCommand.runCommand (package:flutter_tools/src/commands/build_flx.dart:44)
+<asynchronous suspension>
+#9      FlutterCommand.verifyThenRunCommand (package:flutter_tools/src/runner/flutter_command.dart:220)
+<asynchronous suspension>
+#10     BuildSubCommand.verifyThenRunCommand (package:flutter_tools/src/commands/build.dart:50)
+<asynchronous suspension>
+#11     FlutterCommand.run (package:flutter_tools/src/runner/flutter_command.dart:162)
+<asynchronous suspension>
+#12     CommandRunner.runCommand (package:args/command_runner.dart:194)
+<asynchronous suspension>
+#13     FlutterCommandRunner.runCommand (package:flutter_tools/src/runner/flutter_command_runner.dart:277)
+<asynchronous suspension>
+#14     CommandRunner.run.<anonymous closure> (package:args/command_runner.dart:109)
+#15     new Future.sync (dart:async/future.dart:222)
+#16     CommandRunner.run (package:args/command_runner.dart:109)
+#17     FlutterCommandRunner.run (package:flutter_tools/src/runner/flutter_command_runner.dart:161)
+#18     run.<anonymous closure> (package:flutter_tools/executable.dart:142)
+<asynchronous suspension>
+#19     AppContext._run (package:flutter_tools/src/base/context.dart:76)
+<asynchronous suspension>
+#20     AppContext.runInZone.<anonymous closure> (package:flutter_tools/src/base/context.dart:66)
+#21     _rootRun (dart:async/zone.dart:1120)
+#22     _CustomZone.run (dart:async/zone.dart:1001)
+#23     runZoned (dart:async/zone.dart:1467)
+#24     AppContext.runInZone (package:flutter_tools/src/base/context.dart:65)
+#25     run (package:flutter_tools/executable.dart:114)
+<asynchronous suspension>
+#26     main (package:flutter_tools/executable.dart:67)
+<asynchronous suspension>
+#27     main (file:///home/brijesh/flutter/packages/flutter_tools/bin/flutter_tools.dart:16)
+#28     _startIsolate.<anonymous closure> (dart:isolate-patch/isolate_patch.dart:263)
+#29     _RawReceivePortImpl._handleMessage (dart:isolate-patch/isolate_patch.dart:151)
+```
+
+## flutter doctor
+
+```
+[✓] Flutter (on Linux, locale en_IN, channel alpha)
+    • Flutter at /home/brijesh/flutter
+    • Framework revision bbcfb8d51a (2 weeks ago), 2017-08-01 14:50:29 -0700
+    • Engine revision f2af347363
+    • Tools Dart version 1.25.0-dev.7.0
+
+[✓] Android toolchain - develop for Android devices (Android SDK 26.0.0)
+    • Android SDK at /home/brijesh/Android/Sdk
+    • Platform android-26, build-tools 26.0.0
+    • Java binary at: /home/brijesh/Desktop/tool/3.0/android-studio/jre/bin/java
+    • Java version OpenJDK Runtime Environment (build 1.8.0_152-release-884-b01)
+
+[✓] Android Studio (version 2.2)
+    • Android Studio at /home/brijesh/Android/android-studio
+    • Java version OpenJDK Runtime Environment (build 1.8.0_112-release-b06)
+
+[✓] Android Studio (version 2.4)
+    • Android Studio at /home/brijesh/Desktop/tool/android-studio
+    • Java version OpenJDK Runtime Environment (build 1.8.0_112-release-b06)
+
+[✓] Android Studio (version 3.0)
+    • Android Studio at /home/brijesh/Desktop/tool/3.0/android-studio
+    • Java version OpenJDK Runtime Environment (build 1.8.0_152-release-884-b01)
+
+[✓] IntelliJ IDEA Community Edition (version 2017.1)
+    • Flutter plugin version 16.0
+    • Dart plugin version 171.4694.29
+
+[✓] Connected devices
+    • Micromax AQ4502 • 28640040A840CI2 • android-arm • Android 6.0.1 (API 23)
+
+```
