@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:untitled1/product/Product.dart';
 import 'package:untitled1/product/ShoppingListItem.dart';
 
-class SoppingList extends StatefulWidget {
-  SoppingList({Key key, this.product}) :super(key: key);
+class ShoppingList extends StatefulWidget {
+  ShoppingList({Key key, this.product}) :super(key: key);
 
   List<Product> product;
 
@@ -16,7 +16,7 @@ class SoppingList extends StatefulWidget {
   }
 }
 
-class _SoppingListState extends State<SoppingList> {
+class _ShoppingListState extends State<SoppingList> {
 
   @override
   Widget build(BuildContext context) {
